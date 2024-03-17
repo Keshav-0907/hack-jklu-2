@@ -41,42 +41,46 @@ const SignUp = () => {
   };
 
   return (
-    <div className="h-screen w-screen flex justify-center items-center">
-      <div className="bg-gray-800 w-1/3 p-10 h-fit flex flex-col gap-10 text-center rounded-2xl">
-        <span className="text-xl font-bold"> Register Here </span>
+    <div className="h-screen w-screen flex justify-center items-center bg-black">
+      <div className="bg-gray-800 w-1/3 p-10 h-fit flex flex-col gap-10 text-center rounded-xl">
+        <span className="text-xl font-bold text-white"> Register Here </span>
 
         <div className="flex flex-col gap-5">
           <input
-            className="p-2 rounded-xl"
+            className="p-2 rounded-md"
             type="text"
+            s
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="Enter your Name"
           />
           <input
-            className="p-2 rounded-xl"
+            className="p-2 rounded-md"
             type="text"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email"
           />
           <input
-            className="p-2 rounded-xl"
+            className="p-2 rounded-md"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Enter your password"
           />
+          
         </div>
-        <div>
-          Already Registered ? <Link href={"/"}> Click Here </Link>
+        <div className="flex flex-col gap-4">
+          <div className="text-white">
+            Already Registered ? <Link href={"/"}> Click Here </Link>
+          </div>
+          <button
+            className="bg-blue-500 p-2 rounded-xl text-white"
+            onClick={handleSubmit}
+          >
+            Register
+          </button>
         </div>
-        <button
-          className="bg-blue-500 p-2 rounded-xl text-white"
-          onClick={handleSubmit}
-        >
-          Register
-        </button>
       </div>
     </div>
   );

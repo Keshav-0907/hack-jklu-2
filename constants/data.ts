@@ -148,6 +148,24 @@ export const navItems: NavItem[] = [
     icon: "activity",
     label: "websiteStats",
   },
+  {
+    title: "Slack",
+    href: "/dashboard/slack",
+    icon: "activity",
+    label: "slack",
+  },
+  {
+    title:'CRM',
+    href:'/dashboard/crm',
+    icon:'activity',
+    label:'crm'
+  },
+  {
+    title: "Blogs",
+    href: "/dashboard/blogs",
+    icon: "activity",
+    label: "blogs",
+  }
 ];
 
 

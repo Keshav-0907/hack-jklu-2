@@ -42,20 +42,20 @@ const Login = () => {
     }
   };
   return (
-    <div className="h-screen w-screen flex justify-center items-center">
+    <div className="h-screen w-screen flex justify-center items-center bg-black">
       <div className="bg-gray-800 w-1/3 p-10 h-fit flex flex-col gap-10 text-center rounded-2xl">
-        <span className="text-xl font-bold"> Login Here </span>
+        <span className="text-xl font-bold text-white "> Login Here </span>
 
         <div className="flex flex-col gap-5">
           <input
-            className="p-2 rounded-xl"
+            className="p-2 rounded-md"
             type="text"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email"
+            placeholder="Enter your emailf"
           />
           <input
-            className="p-2 rounded-xl"
+            className="p-2 rounded-md"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -63,15 +63,21 @@ const Login = () => {
           />
         </div>
 
-        <div>
-          Not Registered ? <Link href={"/signup"}> Click Here </Link>
+        <div className="flex flex-col gap-3">
+          <div className="text-sm text-white">
+            Not Registered ?{" "}
+            <Link href={"/signup"} className="text-blue-500">
+              {" "}
+              Click Here{" "}
+            </Link>
+          </div>
+          <button
+            className="bg-blue-500 p-2 rounded-md text-white w-full"
+            onClick={handleSignIn}
+          >
+            Login
+          </button>
         </div>
-        <button
-          className="bg-blue-500 p-2 rounded-xl text-white"
-          onClick={handleSignIn}
-        >
-          Login
-        </button>
       </div>
     </div>
   );
